@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:pages="clr-namespace:XF.Facilista.Pages"
+            x:Class="XF.Facilista.Pages.ListsPage">
+  <!--Pages can be added as references or inline-->
+
+    <pages:ListItemsPage Title="Minhas Listas" />
+    <ContentPage Title="Atualizar Preços" />
+</TabbedPage>

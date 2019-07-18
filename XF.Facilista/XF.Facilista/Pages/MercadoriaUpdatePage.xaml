@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    Title="Mercadoria ABC"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XF.Facilista.Pages.MercadoriaUpdatePage">
+  <ContentView.Content>
+      
+      <StackLayout Padding="10">
+            <Label Text="Produto ABC" />
+            <Label Text="R$20,00" />
+            <Label Text="10 Uni" />
+      </StackLayout>
+      
+  </ContentView.Content>
+</ContentPage>

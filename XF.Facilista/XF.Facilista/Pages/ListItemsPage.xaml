@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    Title="Minhas Listas"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:XF.Facilista"
+    x:Class="XF.Facilista.Pages.ListItemsPage">
+
+    <StackLayout>
+        <SearchBar VerticalOptions="StartAndExpand"/>
+
+        <ListView x:Name="Lista"
+                ItemsSource="{Binding Items}"
+                ItemTapped="ListaClicked"
+                CachingStrategy="RecycleElement">
+        </ListView>
+
+        <Button Text="Adicionar" Clicked="ListaAddClicked" VerticalOptions="EndAndExpand" />
+    </StackLayout>
+
+</ContentPage>
