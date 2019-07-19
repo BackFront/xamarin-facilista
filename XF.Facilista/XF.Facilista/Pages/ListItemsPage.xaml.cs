@@ -47,6 +47,8 @@ namespace XF.Facilista.Pages
             ((ListView)sender).SelectedItem = null;
         }
 
-        async void ListaAddClicked(object sender, EventArgs e) => await DisplayAlert("Nova lista", "Criar nova lista", "OK");
+        //async void ListaAddClicked(object sender, EventArgs e) => await DisplayAlert("Nova lista", "Criar nova lista", "OK");
+
+        async void ListaAddClicked(object sender, EventArgs e) => Navigation.PushAsync(new Pages.ListaNewPage());
     }
 }
