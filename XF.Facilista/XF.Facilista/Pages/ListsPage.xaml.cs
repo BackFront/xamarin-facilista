@@ -12,9 +12,6 @@ namespace XF.Facilista.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ListsPage : TabbedPage
     {
-        public ListsPage ()
-        {
-            InitializeComponent();
-        }
+        public ListsPage () => InitializeComponent();
     }
 }

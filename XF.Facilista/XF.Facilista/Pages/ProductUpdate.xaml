@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    Title="Atualizar Produto"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+    x:Class="XF.Facilista.Pages.ProductUpdate">
+    <ContentPage.Resources>
+            <StyleSheet Source="/Assets/Styles/Main.css" />
+        </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <ListView 
+                    x:Name="ProductsListView"
+                    ItemTapped="ProductsListView_ItemClicked"
+                    CachingStrategy="RecycleElement">
+                    <ListView.Header>
+                        <SearchBar x:Name="ProductsSearchBar" Placeholder="Buscar Produto" PlaceholderColor="#ddd" TextChanged="SearchInList"/>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label
+                                    VerticalTextAlignment="Center"
+                                    Text="{Binding Name}" />
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--<ListView x:Name="ProductsListView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <input:CheckBox Text="{Binding Name}" Type="Check" />
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF.Facilista.Pages.ProductDetail">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Assets/Styles/Main.css"></StyleSheet>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <ListView
+                    x:Name="MarketsListView"
+                    ItemTapped="MarketsListView_ItemClicked"
+                    CachingStrategy="RecycleElement">
+                    <ListView.Header>
+                        <SearchBar x:Name="ProductsSearchBar" Placeholder="Buscar Produto" PlaceholderColor="#ddd" TextChanged="SearchInMarketList"/>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label
+                                    VerticalTextAlignment="Center"
+                                    Text="{Binding Name}" />
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,16 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage
-    Title="Mercadoria ABC"
+    Title="Atualizar Pre~ços"
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
     x:Class="XF.Facilista.Pages.MercadoriaUpdatePage">
-  <ContentView.Content>
-      
-      <StackLayout Padding="10">
-            <Label Text="Produto ABC" />
-            <Label Text="R$20,00" />
-            <Label Text="10 Uni" />
-      </StackLayout>
-      
-  </ContentView.Content>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <SearchBar Placeholder="Varejista" PlaceholderColor="#ddd"/>
+
+                <SearchBar Placeholder="Produto" PlaceholderColor="#ddd"/>
+
+                <input:CheckBox Text="Picanha Freeboi 1Kg - R$45,00" Type="Check" />
+                <input:CheckBox Text="Cerveja Skol 28Lt 320ml - R$36,00" Type="Check" />
+                <input:CheckBox Text="Sal Grosso 1Un - R$2,00" Type="Check" />
+                <input:CheckBox Text="Asa de Frango 1Kg - R$18,00" Type="Check" />
+                <input:CheckBox Text="Linguiça Aurora 1,5Kg - R$25,00" Type="Check" />
+                <input:CheckBox Text="Farofa Yoki 1 Un - R$3,00" Type="Check" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>

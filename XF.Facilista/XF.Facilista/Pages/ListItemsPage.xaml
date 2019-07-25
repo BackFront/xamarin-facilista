@@ -16,6 +16,7 @@
         </ListView>
 
         <Button Text="Adicionar" Clicked="ListaAddClicked" VerticalOptions="EndAndExpand" />
+        
     </StackLayout>
 
 </ContentPage>
