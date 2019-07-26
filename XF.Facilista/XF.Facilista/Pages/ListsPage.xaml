@@ -5,6 +5,6 @@
             x:Class="XF.Facilista.Pages.ListsPage">
   <!--Pages can be added as references or inline-->
 
-    <pages:ListItemsPage Title="Minhas Listas" />
-    <pages:ProductUpdate Title="Atualizar Preços" />
+    <pages:MyListsPage Title="Minhas Listas" />
+    <pages:ProductUpdate Title="Atualizar Produtos" />
 </TabbedPage>

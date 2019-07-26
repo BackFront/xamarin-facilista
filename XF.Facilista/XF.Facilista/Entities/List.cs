@@ -2,12 +2,12 @@
 
 namespace XF.Facilista.Entities
 {
-    class List
+    public class Lists
     {
         public int              ID { get; set; }
         public string           Name { get; set; }
         public string           Description { get; set; }
         public List<Product>    Products { get; set; }
-        public List<int>        ProductsChecked { get; set; }
+        public int[]            ProductsChecked { get; set; }
     }
 }

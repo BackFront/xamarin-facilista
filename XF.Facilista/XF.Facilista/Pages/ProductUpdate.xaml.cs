@@ -19,6 +19,11 @@ namespace XF.Facilista.Pages
 
         public ProductUpdate()
         {
+            /**
+             * @todo conectar no sqlite
+             */
+            //List<Product> listProducts = new Services.ProductService().Listar();
+
             InitializeComponent();
             BindingContext = produtosVM;
         }

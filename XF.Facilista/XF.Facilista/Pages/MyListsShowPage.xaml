@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    Title="Detalhes da Lista"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+    x:Class="XF.Facilista.Pages.MyListsShowPage">
+    
+    <ContentPage.Resources>
+        <StyleSheet Source="/Assets/Styles/Main.css"></StyleSheet>
+    </ContentPage.Resources>
+
+    <StackLayout Spacing="0">
+        <ListView x:Name="MyListProductsView" CachingStrategy="RecycleElement" ItemTapped="MyListShowAddProductClicked">
+
+            <ListView.Header>
+                <SearchBar Placeholder="Buscar Produtos" />
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" />
+                    <!--<ViewCell>
+
+                        <input:CheckBox Type="Material" Text="{Binding Name}" />
+                    </ViewCell>-->
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <ListView x:Name="MyListProductsSelectedsView" CachingStrategy="RecycleElement" ItemTapped="MyListShowRemoveProductClicked">
+
+            <ListView.Header>
+                <Label Text="Itens Selecionados:" FontSize="Medium" />
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Footer>
+                <Button Text="Salvar" Clicked="MyListShowSaveClicked" VerticalOptions="EndAndExpand" />
+            </ListView.Footer>
+
+        </ListView>
+    </StackLayout>
+</ContentPage>

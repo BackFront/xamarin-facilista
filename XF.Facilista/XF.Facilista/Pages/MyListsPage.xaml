@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XF.Facilista.Pages.MyListsPage">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="/Assets/Styles/Main.css"></StyleSheet>
+    </ContentPage.Resources>
+
+    <ListView
+        x:Name="MyListView"
+        ItemsSource="{Binding Items}"
+        ItemTapped="MyListItemClicked"
+        CachingStrategy="RecycleElement">
+
+        <ListView.Header>
+            <SearchBar x:Name="MyListsSearchBar" Placeholder="Buscar Lista" PlaceholderColor="#ddd" TextChanged="SearchInMyLists"/>
+        </ListView.Header>
+      
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell x:Name="Item">
+                    <!--<TextCell Text="{Binding Name}" Detail="Teste" />-->
+                    <ViewCell.View>
+                        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand">
+                            <Label Text="{Binding Name}" StyleClass="lst-title" VerticalTextAlignment="Center" />
+                            <!--<Label Text="{Binding Description}" StyleClass="lst-description"/>-->
+                        </StackLayout>
+                    </ViewCell.View>
+                    
+                    <ViewCell.ContextActions>
+                        <MenuItem Clicked="MyListItemEditClicked" CommandParameter="{Binding .}" Text="Editar" />
+                        <MenuItem Clicked="MyListItemRemoveClicked" CommandParameter="{Binding .}" Text="Deletar" />
+                    </ViewCell.ContextActions>
+                    
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        
+        <ListView.Footer>
+            <Button Text="Adicionar Lista" Clicked="MyListAddClicked" VerticalOptions="EndAndExpand" />
+        </ListView.Footer>
+     
+    </ListView>
+</ContentPage>

@@ -13,6 +13,6 @@
         Cartela     = 8,
         Duzia       = 9,
         Rolo        = 10,
-        Pacote      = 11,
+        Embalagem      = 11,
     }
 }

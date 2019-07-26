@@ -10,11 +10,8 @@ using Xamarin.Forms.Xaml;
 namespace XF.Facilista.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ListaNewPage : ContentPage
+	public partial class MyListsAddPage : ContentPage
 	{
-		public ListaNewPage ()
-		{
-			InitializeComponent ();
-		}
+		public MyListsAddPage() => InitializeComponent ();
 	}
 }
